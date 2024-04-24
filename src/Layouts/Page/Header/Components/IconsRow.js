@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Clickable from "../../../../Components/Clickable";
-import MessagesIcon from "../../../../Icons/MessagesIcon";
+import MessagesIcon from "../../../../Icons/NotificationsIcon";
 import NotificationsIcon from "../../../../Icons/NotificationsIcon";
 import IconOnlyButton from "../../../../Components/IconOnlyButton";
 
@@ -22,16 +22,9 @@ const ButtonRightWrapper = styled.div`
 function IconsRow() {
     return (
         <div className='d-inline-flex flex-row align-items-center align-self-center'>
-            <ButtonLeftWrapper>
-                <Clickable>
-                    <div className="text-rg-bd">Сообщения (0)</div>
-                </Clickable>
-            </ButtonLeftWrapper>
-            <ButtonRightWrapper>
-                <Clickable>
-                    <div className="text-rg-bd">Оповещения (0)</div>
-                </Clickable>
-            </ButtonRightWrapper>
+          
+          <IconOnlyButton icon={<MessagesIcon/>}/>
+          <IconOnlyButton icon={<NotificationsIcon/>}/>
         </div>
     );
 }
